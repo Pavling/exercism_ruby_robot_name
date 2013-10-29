@@ -34,4 +34,11 @@ class RobotTest < MiniTest::Unit::TestCase
     end
     assert_equal names, names.uniq
   end
+
+  def test_robot_class_reset
+    names = Robot.class_variable_get(:@@potential_names)
+    Robot.reset
+    new_names = Robot.class_variable_get(:@@potential_names)
+    assert names != new_names, 'Robot potential names are the same after a reset'
+  end
 end
