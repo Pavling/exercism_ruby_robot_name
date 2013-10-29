@@ -1,12 +1,15 @@
 class Robot
 
+  @@potential_names = ('aa000'..'zz999').to_a.shuffle
+
   def name
     @name ||= generate_name
   end
 
   private
   def generate_name
-    'tk421'
+    raise "no names left to choose!" if @@potential_names.empty?
+    @@potential_names.pop
   end
 
 end
