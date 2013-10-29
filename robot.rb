@@ -6,6 +6,10 @@ class Robot
     @name ||= generate_name
   end
 
+  def reset
+    @name = nil
+  end
+
   private
   def generate_name
     raise "no names left to choose!" if @@potential_names.empty?
