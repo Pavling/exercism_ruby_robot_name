@@ -1,6 +1,9 @@
 class Robot
 
-  @@potential_names = ('aa000'..'zz999').to_a.shuffle
+  def self.reset
+    @@potential_names = ('aa000'..'zz999').to_a.shuffle
+  end
+  reset
 
   def name
     @name ||= generate_name
