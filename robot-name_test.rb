@@ -7,14 +7,12 @@ class RobotTest < MiniTest::Unit::TestCase
   end
 
   def test_name_sticks
-    skip
     robot = Robot.new
     robot.name
     assert_equal robot.name, robot.name
   end
 
   def test_different_robots_have_different_names
-    skip
     assert Robot.new.name != Robot.new.name
   end
 
