@@ -2,7 +2,7 @@ class Robot
 
   class << self
     def reset
-      @@potential_names = ('aa000'..'zz999').to_a.shuffle
+      @@potential_names = ('AA000'..'ZZ999').to_a.shuffle
     end
 
     def generate_name
@@ -10,7 +10,7 @@ class Robot
       @@potential_names.pop
     end
   end
-  
+
   reset
 
   def name
